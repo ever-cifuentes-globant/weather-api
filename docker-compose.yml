@@ -1,0 +1,9 @@
+version: '3'
+services:
+  weather_api:
+    image: weather_api
+    container_name: weather_api
+    ports:
+      - "3000:8080"
+    volumes:
+      - ./:/go/src/github.com/ever-cifuentes-globant/weather-api

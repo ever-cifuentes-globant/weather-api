@@ -1,0 +1,64 @@
+swagger: "2.0"
+info:
+  title: beego Test API
+  description: beego has a very cool tools to autogenerate documents for your API
+  version: 1.0.0
+  termsOfService: http://beego.me/
+  contact:
+    email: astaxie@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+basePath: /weather-api
+paths:
+  /weather/city/{idcity}/country/{idcountry}:
+    get:
+      tags:
+      - weather
+      description: get country and city
+      operationId: WeatherController.GetWeather
+      parameters:
+      - in: path
+        name: idcity
+        description: The City
+        required: true
+        type: string
+      - in: path
+        name: idcountry
+        description: The Country
+        required: true
+        type: string
+      responses:
+        "200":
+          description: '{Object} models.Weather'
+        "403":
+          description: :city not exist
+  /weather/scheduler/weather:
+    put:
+      tags:
+      - weather
+      description: update the weather
+      operationId: WeatherController.UpdateWeather
+      parameters:
+      - in: body
+        name: body
+        description: body for weather content
+        required: true
+        schema:
+          $ref: '#/definitions/viewmodels.WeatherPersist'
+      responses:
+        "403":
+          description: :city not exist
+definitions:
+  viewmodels.WeatherPersist:
+    title: WeatherPersist
+    type: object
+    properties:
+      city:
+        type: string
+      country:
+        type: string
+tags:
+- name: weather
+  description: |
+    Operations about weather
