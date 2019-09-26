@@ -2,68 +2,129 @@
 
 
 [[projects]]
+  digest = "1:b7070c7f5878f15a3737c6d6e122d3ca4a2da9ac84d1b3cc6e27707e69e51e2d"
   name = "github.com/astaxie/beego"
-  packages = [".","config","context","context/param","grace","logs","orm","session","toolbox","utils"]
+  packages = [
+    ".",
+    "config",
+    "context",
+    "context/param",
+    "grace",
+    "logs",
+    "orm",
+    "session",
+    "toolbox",
+    "utils",
+  ]
+  pruneopts = ""
   revision = "32ee728078c84c28f2642c70745afc8f6830044d"
   version = "v1.12.0"
 
 [[projects]]
+  digest = "1:0deddd908b6b4b768cfc272c16ee61e7088a60f7fe2f06c547bd3d8e1f8b8e77"
   name = "github.com/davecgh/go-spew"
   packages = ["spew"]
+  pruneopts = ""
   revision = "8991bc29aa16c548c550c7ff78260e27b9ab7c73"
   version = "v1.1.1"
 
 [[projects]]
+  digest = "1:f4216047c24ab66fb757045febd7dac4edc6f4ad9f6c0063d0755d654d04f25e"
   name = "github.com/lib/pq"
-  packages = [".","oid","scram"]
+  packages = [
+    ".",
+    "oid",
+    "scram",
+  ]
+  pruneopts = ""
   revision = "3427c32cb71afc948325f299f040e53c1dd78979"
   version = "v1.2.0"
 
 [[projects]]
+  digest = "1:256484dbbcd271f9ecebc6795b2df8cad4c458dd0f5fd82a8c2fa0c29f233411"
   name = "github.com/pmezard/go-difflib"
   packages = ["difflib"]
+  pruneopts = ""
   revision = "792786c7400a136282c1664665ae0a8db921c6c2"
   version = "v1.0.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:d0148ccd69edc991a8e0e472ae9720f5b46209e12a00c0ba11b4cbcc4fc2c72b"
   name = "github.com/shiena/ansicolor"
   packages = ["."]
+  pruneopts = ""
   revision = "a422bbe96644373c5753384a59d678f7d261ff10"
 
 [[projects]]
+  digest = "1:f7b541897bcde05a04a044c342ddc7425aab7e331f37b47fbb486cd16324b48e"
   name = "github.com/stretchr/testify"
   packages = ["assert"]
+  pruneopts = ""
   revision = "221dbe5ed46703ee255b1da0dec05086f5035f62"
   version = "v1.4.0"
 
 [[projects]]
   branch = "master"
+  digest = "1:dfb5b39cdf15fedcf18211253981cd7d4d881fcb3c9fa63140b02ec71aead457"
   name = "golang.org/x/crypto"
-  packages = ["acme","acme/autocert"]
+  packages = [
+    "acme",
+    "acme/autocert",
+  ]
+  pruneopts = ""
   revision = "9ee001bba392397c76f100a2d5b13afc86f167f1"
 
 [[projects]]
   branch = "master"
+  digest = "1:b123a95f458db7b93e65276282e352cbf195095bc2ea2ec81601949de04f7365"
   name = "golang.org/x/net"
   packages = ["idna"]
+  pruneopts = ""
   revision = "aa69164e4478b84860dc6769c710c699c67058a3"
 
 [[projects]]
+  digest = "1:740b51a55815493a8d0f2b1e0d0ae48fe48953bf7eaf3fcc4198823bf67768c0"
   name = "golang.org/x/text"
-  packages = ["collate","collate/build","internal/colltab","internal/gen","internal/language","internal/language/compact","internal/tag","internal/triegen","internal/ucd","language","secure/bidirule","transform","unicode/bidi","unicode/cldr","unicode/norm","unicode/rangetable"]
+  packages = [
+    "collate",
+    "collate/build",
+    "internal/colltab",
+    "internal/gen",
+    "internal/language",
+    "internal/language/compact",
+    "internal/tag",
+    "internal/triegen",
+    "internal/ucd",
+    "language",
+    "secure/bidirule",
+    "transform",
+    "unicode/bidi",
+    "unicode/cldr",
+    "unicode/norm",
+    "unicode/rangetable",
+  ]
+  pruneopts = ""
   revision = "342b2e1fbaa52c93f31447ad2c6abc048c63e475"
   version = "v0.3.2"
 
 [[projects]]
+  digest = "1:cedccf16b71e86db87a24f8d4c70b0a855872eb967cb906a66b95de56aefbd0d"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = ""
   revision = "51d6538a90f86fe93ac480b35f37b2be17fef232"
   version = "v2.2.2"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "abf10ad36052458adb8a661aa2d91e04474e270d1630e718806abd78950d121d"
+  input-imports = [
+    "github.com/astaxie/beego",
+    "github.com/astaxie/beego/context/param",
+    "github.com/astaxie/beego/orm",
+    "github.com/lib/pq",
+    "github.com/stretchr/testify/assert",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

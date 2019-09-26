@@ -109,7 +109,7 @@ func init() {
 
 	_ = orm.RegisterDataBase("default",
 		"postgres",
-		"user=postgres password=postgres host=127.0.0.1 port=5432 dbname=postgres sslmode=disable")
+		"user=postgres password=postgres host=pq port=5432 dbname=postgres sslmode=disable")
 }
 
 func getLocation(city, country string) string {

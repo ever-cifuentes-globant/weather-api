@@ -7,3 +7,21 @@ services:
       - "3000:8080"
     volumes:
       - ./:/go/src/github.com/ever-cifuentes-globant/weather-api
+    links:
+      - "db:db"
+      - "pq:pq"
+  pq:
+    image: postgres:9.5
+    container_name: weather_api_pq
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+  db:
+    image: mysql:5.7
+    container_name: weather_api_db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=weather_api_db
+    ports:
+      - "3306:3306"
