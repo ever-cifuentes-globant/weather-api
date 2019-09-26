@@ -11,6 +11,7 @@
     "context/param",
     "grace",
     "logs",
+    "migration",
     "orm",
     "session",
     "toolbox",
@@ -122,6 +123,7 @@
   input-imports = [
     "github.com/astaxie/beego",
     "github.com/astaxie/beego/context/param",
+    "github.com/astaxie/beego/migration",
     "github.com/astaxie/beego/orm",
     "github.com/lib/pq",
     "github.com/stretchr/testify/assert",
